@@ -1,0 +1,6 @@
+@use '../../../app/styles/common/var';
+
+.root {
+  display: flex;
+  background-color: var.$gray-light;
+}

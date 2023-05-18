@@ -1,0 +1,1 @@
+export { ChatHeaderProfile } from "./ChatHeaderProfile";

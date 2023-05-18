@@ -1,0 +1,44 @@
+@use '../../../../app/styles/common/var';
+
+.root {
+  display: flex;
+  // padding: 3px 0;
+  padding-right: 15px;
+  color: gray;
+  &:hover {
+    background-color: #f0f2f571;
+    cursor: pointer;
+  }
+
+  .user_info__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 10 auto;
+    border-bottom: 1px solid #f0f2f5;
+    .userInfo {
+      display: flex;
+      align-items: center;
+    justify-content: space-between;
+    .name {
+      color: black;
+      font-size: 1.2rem;
+      padding: 10px 0;
+    }
+   
+  }
+  
+  .last_message {
+      display: -webkit-box;
+      max-width: 100%;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+}
+}
+
+.active {
+  background-color: var.$gray-light;
+}
