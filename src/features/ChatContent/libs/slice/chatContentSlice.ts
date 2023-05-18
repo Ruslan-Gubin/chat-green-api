@@ -98,7 +98,6 @@ export const chatContentSlice = createSlice({
         state.error = "Server Error";
       })
       .addCase(fetchDeleteNotification.fulfilled, (state, action) => {
-        console.log(action.payload);
         if (action.payload.result) {
           state.newMessage = null;
         }

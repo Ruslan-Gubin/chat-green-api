@@ -11,8 +11,6 @@ interface ResponseAuthPromise extends IRequestParam {
 
 const fetchAuthData = createAsyncThunk<ResponseAuthPromise, IRequestParam>('authSlice/fetchAuthData', async(input) => {
   const response = await fetchAuthInfo<{wid: string}>(input.instance, input.token)
-  
-  console.log(response)
 
   return {response, inputs: {...input}} as ResponseAuthPromise
 })
