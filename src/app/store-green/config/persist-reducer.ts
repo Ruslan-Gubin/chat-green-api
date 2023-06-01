@@ -11,7 +11,7 @@ export const persistedReducer = persistReducer(
 
     storage,
     blacklist: [
-
+      'chatContentSlice',
     ],
   },
   rootReducer
