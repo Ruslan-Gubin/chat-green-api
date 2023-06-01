@@ -53,7 +53,7 @@ const ChatContent = () => {
         }
       })
           
-  },[])
+  },[activeContact])
 
   return (
     <>
