@@ -17,7 +17,7 @@ const ChatUserList = () => {
       instance: IdInstance,
       token: ApiTokenInstance,
     })
-  }, [ApiTokenInstance, IdInstance, fetchAllChats]);
+  }, []);
 
 
   const contactsList = searchContact ? [searchContact] : activeChats
