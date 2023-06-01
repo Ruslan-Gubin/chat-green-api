@@ -27,6 +27,7 @@ export const extraReducers = (
 
   builder
     .addCase(chatNotification.pending, (state) => {
+      console.log('true')
       state.notificationStatus = true;
       state.error = null;
     })
@@ -34,6 +35,7 @@ export const extraReducers = (
       state.error = "Server Error";
     })
     .addCase(chatNotification.fulfilled, (state, action) => {
+      console.log('false')
       state.notificationStatus = false;
       state.error = null;
 

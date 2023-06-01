@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { useViewer } from '@/entities';
 import { Message, useChatContentAction, useChatContentSelect, useContactSelect } from '@/features';
-import { useAppDispatch } from '@/shared';
 
 import styles from './ChatContent.module.scss';
 
@@ -9,8 +8,8 @@ const ChatContent = () => {
   const { ApiTokenInstance, IdInstance, wid } = useViewer()
   const { activeContact } = useContactSelect()
   const {  loading, cache, newMessage, notificationStatus } = useChatContentSelect()
-  const {  getChatHistory, chatNotification, deleteNotification } = useChatContentAction()
-  const dispatch = useAppDispatch()
+  const { chatNotification, deleteNotification, getChatHistory } = useChatContentAction()
+
 
   const chatContent = useMemo(() => {
     if (!activeContact) return;
@@ -23,30 +22,23 @@ const ChatContent = () => {
 
 
   useEffect(() => {
-    if (!ApiTokenInstance || !IdInstance || !wid ) return;
-   const timer = setInterval(() => {
-
-   if (!newMessage) {
-       chatNotification({
-         instance: IdInstance,
-         token: ApiTokenInstance,
-         wid, 
-       })
-   } else {
-     deleteNotification({
-       instance: IdInstance,
-       token: ApiTokenInstance,
-       params: newMessage.receiptId,
-     })
-   }
+    if (!ApiTokenInstance || !IdInstance || !wid || notificationStatus) return;
    
-   },5000)
-
-    return () => {
-      clearInterval(timer)
+      if (!newMessage) {
+        chatNotification({
+          instance: IdInstance,
+          token: ApiTokenInstance,
+          wid, 
+        })
+    } else {
+      deleteNotification({
+        instance: IdInstance,
+        token: ApiTokenInstance,
+        params: newMessage.receiptId,
+      })
     }
  
-  }, [ApiTokenInstance, IdInstance, dispatch, newMessage, wid, notificationStatus])
+  }, [ApiTokenInstance, IdInstance,  newMessage, wid, notificationStatus, chatNotification, deleteNotification])
 
   useEffect(() => {
     if (!ApiTokenInstance || !IdInstance || !activeContact) return;
@@ -61,7 +53,7 @@ const ChatContent = () => {
         }
       })
           
-  },[ activeContact, ApiTokenInstance, IdInstance,  cache ])
+  },[activeContact, notificationStatus, newMessage])
 
   return (
     <>

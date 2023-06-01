@@ -33,7 +33,7 @@ export const chatNotification = createAsyncThunk<
     auth.instance,
     auth.token
   );
-
+console.log(response)
   if (!response) {
     return null;
   } else {
