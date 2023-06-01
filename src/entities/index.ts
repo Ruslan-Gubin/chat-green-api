@@ -1,1 +1,1 @@
-export { UserAvatar } from "./User";
+export * from "./viewer";

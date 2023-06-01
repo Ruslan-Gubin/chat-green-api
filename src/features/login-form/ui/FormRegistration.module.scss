@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  padding: 15px;
+  border-radius: 10px;
+  padding-bottom: 40px;
+  
+  .submit_btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  } 
+  }

@@ -1,4 +1,4 @@
-import { LoginCard } from "@/features";
+import { LoginForm } from '@/widgets';
 
 import styles from '../../app/styles/pages/LoginPage.module.scss';
 
@@ -6,7 +6,8 @@ const LoginPage = () => {
 
   return (
     <div className={styles.root}>
-    <LoginCard />
+      <h2  className={styles.header_link}>{'Введите данные'}</h2>
+    <LoginForm />
     </div>
   );
 };
