@@ -15,8 +15,6 @@
 
 <img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686751831/git-hub-img/visual_schema_ndg3zi.jpg" width="60" height="40">   Feature-Sliced Design - архитектурная методология для проектирования frontend-приложени.
 
-<img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686752296/git-hub-img/38744c4059b2387f3a6ad56c8951c985_vxmvmo.jpg" width="60" height="40">  Apollo - клиент для GraphQL API.
-
 <img src="https://res.cloudinary.com/ds289tkqj/image/upload/v1686752467/git-hub-img/1jwk9rkgalxe89uftrha_xqaajc.webp" width="60" height="40"> Styled-components - библиотека для написания CSS внутри компонентов.
 
 ## Описание
