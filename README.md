@@ -1,5 +1,9 @@
 [Chat можно посмотреть здесь](https://chat-green-api.vercel.app)
 
+[Видео](https://res.cloudinary.com/ds289tkqj/video/upload/v1685644854/samples/Ruslan-Gubin_chat-green-api_-_Google_Chrome_2023-06-01_21-31-45_zvqpku.mp4)
+
+[Регистрация](https://console.green-api.com/instanceList)
+
 ## [Frontend](src)
  
 <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;TypeScript  язык программирования, который добавляет статическую типизацию к JavaScript.
